@@ -1,4 +1,3 @@
-'use strict'
 
 // We're using $() to prevent tests from running until the DOM
 // is ready, since some tests rely on it to pass.
@@ -66,7 +65,7 @@ $(function() {
           it('hides on second click', function(){
             menu.toggleClass('menu-hidden');
             expect(menu.hasClass('menu-hidden')).toBe(true);
-          });
+        });
 
     });
         
@@ -75,7 +74,7 @@ $(function() {
     // a minimum of a single entry within the feed list. (Async)
 
     describe('Initial Entries', function(){
-        let entry = $('.entry');
+        let entry = $('.feed .entry');
         beforeEach(function(done){
             loadFeed(0, function(){
                 done();
